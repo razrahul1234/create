@@ -23,6 +23,10 @@ router.get('/getUser', (req, res) => {
     res.json({author: req.body.author, title:req.body.title,  body:req.body.body });
  });
 
+ router.post('/deleteBlog', (req,res)=>{
+     res.status(200).json({blogId:req.body.blogId,response:"Blog has been deleted!", statusText:"OK"});
+ })
+
  app.use("/", router);
 
 // Server
